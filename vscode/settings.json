@@ -2,7 +2,6 @@
     "security.workspace.trust.untrustedFiles": "open",
     "editor.minimap.enabled": false,
     "editor.inlineSuggest.enabled": true,
-    "vscode-edge-devtools.mirrorEdits": true,
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
     "explorer.confirmDelete": false,
@@ -19,3 +18,4 @@
     },
     "workbench.colorTheme": "Catppuccin Mocha",
     "svelte.enable-ts-plugin": true
+}
