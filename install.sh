@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# based on riley's script :) https://github.com/hopolapopola/riley-dot-files/blob/main/install_zsh.sh
+# based on Riley's script :) https://github.com/hopolapopola/riley-dot-files/blob/main/install_zsh.sh
 zsh_stuff() {
+    # install omz
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     # get extensions
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
@@ -16,38 +17,28 @@ zsh_stuff() {
 
 other_stuff () {
     case $distro in
-        Ubun|Debi)
+        Ubun|Debi|Linu)
             # kitty
             curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
             cp kitty/kitty.conf ~/.config/kitty/kitty.conf
             cp kitty/colors.conf ~/.config/kitty/colors.conf
+            printf "Installed kitty!"
 
             # neofetch
             sudo apt install neofetch
             cp neofetch/config.conf ~/.config/neofetch/config.conf
+            printf Installed neofetch!
             ;;
         macOS)
             brew install neofetch
             cp neofetch/config.conf ~/.config/neofetch/config.conf
+            printf "Installed neofetch!"
             ;;
         *)
             printf "section failed :("
             exit 1
             ;;
     esac
-}
-
-bamboo () {
-    printf('Installing ibus-bamboo (Vietnamese typeface)')
-    case $distro in
-        Ubun|Debi}
-            sudo add-apt-repository ppa:bamboo-engine/ibus-bamboo
-            sudo apt-get update
-            sudo apt-get install ibus ibus-bamboo --install-recommends
-            ibus restart
-            ;;
-        Arch)
-            bash -c "$(curl -fsSL https://raw.githubusercontent.com/BambooEngine/ibus-bamboo/master/archlinux/install.sh)"
 }
 
 # Riley's code
@@ -117,7 +108,7 @@ install_zsh() {
 		Arch)
 			sudo pacman -Syu zsh
 			;;
-		Ubun|Debi)
+		Ubun|Debi|Linu)
 			sudo apt install zsh
 			;;
 		"macOS"|"iPhone")
@@ -132,7 +123,7 @@ install_zsh() {
 
 copy_zshrc() {
     case $distro in 
-        Ubun|Debi|macOS)
+        Ubun|Debi|Linu|macOS)
             cp .zshrc $HOME/.zshrc
             ;;
         *)
@@ -141,6 +132,31 @@ copy_zshrc() {
             ;;
     esac
 }
+
+bamboo () {
+    printf "Installing ibus-bamboo (Vietnamese typeface)"
+    case $distro in
+        Ubun|Debi|Linu)
+            printf "Installing ibus-bamboo for $distro!"
+            sudo add-apt-repository ppa:bamboo-engine/ibus-bamboo
+            sudo apt-get update
+            sudo apt-get install ibus ibus-bamboo --install-recommends
+            ibus-daemon &
+            ibus restart
+            printf "Installed ibus-bamboo!"
+            ;;
+        Arch)
+            printf "Installing ibus-bamboo for arch!"
+            bash -c "$(curl -fsSL https://raw.githubusercontent.com/BambooEngine/ibus-bamboo/master/archlinux/install.sh)"
+            printf "Installed ibus-bamboo!"
+            ;;
+        *)
+            printf "section failed :("
+            exit 1
+            ;;
+    esac
+}
+
 
 help_info() {
     printf "Available options:"
@@ -152,6 +168,7 @@ help_info() {
     printf " -e or --extras installs the extra stuff too" 
     printf "\n"
     printf " -b or --bamboo installs ibus-bamboo (Vietnamese typeface)"
+    printf "\n"
     printf " -h or --help or just anything not listed here gets you this :)"
     printf "\n"
 }
@@ -166,3 +183,33 @@ main() {
 	printf "Finished the main things"
 	return 0
 }
+
+	cache_uname
+	get_os
+	get_distro
+
+while [ ! -z "$1" ]; do
+    case $1 in
+        --install|-i)
+            shift
+            main
+            ;;
+        --extra|-e)
+            shift
+            other_goodies
+            ;;
+        --bamboo|-b)
+            shift
+            bamboo
+            ;;
+        --help|-h)
+            shift
+            help_info
+            ;;
+        *)
+            shift
+            help_info
+            ;;
+    esac
+shift
+done
