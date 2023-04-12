@@ -178,8 +178,8 @@ main() {
 	get_os
 	get_distro
 	install_zsh
+	zsh_stuff
 	copy_zshrc
-	zsh_goodies
 	printf "Finished the main things"
 	return 0
 }
@@ -196,7 +196,7 @@ while [ ! -z "$1" ]; do
             ;;
         --extra|-e)
             shift
-            other_goodies
+            other_stuff
             ;;
         --bamboo|-b)
             shift
