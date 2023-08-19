@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # based on Riley's script :) https://github.com/hopolapopola/riley-dot-files/blob/main/install_zsh.sh
+# no this still doesn't work
 zsh_stuff() {
     # install omz
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -123,9 +124,11 @@ install_zsh() {
 
 copy_zshrc() {
     case $distro in 
-        Ubun|Debi|Linu|macOS)
-            cp .zshrc $HOME/.zshrc
+        Ubun|Debi|Linu)
+            cp zshrc/.zshrc_linux $HOME/.zshrc
             ;;
+        macOS)
+            cp zshrc/.zshrc_mac $HOME/.zshrc
         *)
 			printf "Realistically, you're never gonna see this because it would've errored out way before :)"
 			exit 1
