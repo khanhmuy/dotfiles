@@ -136,31 +136,6 @@ copy_zshrc() {
     esac
 }
 
-bamboo () {
-    printf "Installing ibus-bamboo (Vietnamese typeface)"
-    case $distro in
-        Ubun|Debi|Linu)
-            printf "Installing ibus-bamboo for $distro!"
-            sudo add-apt-repository ppa:bamboo-engine/ibus-bamboo
-            sudo apt-get update
-            sudo apt-get install ibus ibus-bamboo --install-recommends
-            ibus-daemon &
-            ibus restart
-            printf "Installed ibus-bamboo!"
-            ;;
-        Arch)
-            printf "Installing ibus-bamboo for arch!"
-            bash -c "$(curl -fsSL https://raw.githubusercontent.com/BambooEngine/ibus-bamboo/master/archlinux/install.sh)"
-            printf "Installed ibus-bamboo!"
-            ;;
-        *)
-            printf "section failed :("
-            exit 1
-            ;;
-    esac
-}
-
-
 help_info() {
     printf "Available options:"
     printf "\n"
@@ -200,10 +175,6 @@ while [ ! -z "$1" ]; do
         --extra|-e)
             shift
             other_stuff
-            ;;
-        --bamboo|-b)
-            shift
-            bamboo
             ;;
         --help|-h)
             shift

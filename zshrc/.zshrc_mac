@@ -17,5 +17,3 @@ alias commit="git commit"
 alias ghub="cd ~/Documents/gh"
 alias downloads="cd ~/Downloads"
 alias mountefi="sudo diskutil mount disk0s1"
-export PATH=$PATH:/Users/hmuy/.spicetify
-export THEOS=~/theos
