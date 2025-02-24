@@ -5,7 +5,7 @@ ZSH_THEME="candy_custom"
 
 source $ZSH"/catppuccin_mocha-zsh-syntax-highlighting.zsh"
 
-plugins=(git sudo adb npm python zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git sudo npm python zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -14,5 +14,12 @@ alias push="git push"
 alias clone="git clone"
 alias commit="git commit"
 
+alias lpm="powerprofilesctl set power-saver"
+alias perf="powerprofilesctl set performance"
+
 alias ghub="cd ~/Documents/gh"
 alias downloads="cd ~/Downloads"
+export PATH=$PATH:/home/hmuy/.spicetify
+export PATH=$PATH:~/.spoof-dpi/bin
+export THEOS=~/theos
+export THEOS=~/theos
