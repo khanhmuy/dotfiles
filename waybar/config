@@ -26,7 +26,7 @@
         			"warning": 30,
         			"critical": 15
     			},
-    			"format": "{icon} {capacity}%",
+    			"format": "{icon}   {capacity}%",
 				"format-alt": "{time}",
 				"format-time": "{H}h {M}min",
     			"format-icons": ["", "", "", "", ""],
@@ -35,7 +35,7 @@
 		"network": {
 		    "interface": "wlp2s0",
 		    "format": "{ifname}",
-		    "format-wifi": " {essid}",
+		    "format-wifi": "   {essid}",
 		    "format-ethernet": "{ipaddr}/{cidr} 󰊗",
 		    "format-disconnected": "",
 		    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
@@ -99,12 +99,12 @@
 			"spacing": 10
 		},
 		"clock": {
-			"format": " {:%H:%M}"
+			"format": "   {:%H:%M}"
 		},
     	"pulseaudio": {
-        	"format": "{icon} {volume}%",
-        	"format-bluetooth": "{icon} {volume}%",
-        	"format-bluetooth-muted": " {icon}",
+        	"format": "{icon}   {volume}%",
+        	"format-bluetooth": "{icon}   {volume}%",
+        	"format-bluetooth-muted": "   {icon}",
         	"format-muted": "󰸈",
         	"format-icons": {
             		"headphone": "",
