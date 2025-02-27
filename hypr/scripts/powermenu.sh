@@ -7,7 +7,7 @@ suspend='󰤄 Suspend'
 logout='󰗼 Logout'
 
 
-chosen=$(echo -e "$lock\n$suspend\n$logout\n$reboot\n$shutdown" | rofi -dmenu -p "Питание" -theme ~/.config/rofi/powermenu.rasi)
+chosen=$(echo -e "$lock\n$suspend\n$logout\n$reboot\n$shutdown" | rofi -dmenu -p "Power" -theme ~/.config/rofi/powermenu.rasi)
 case ${chosen} in
     $shutdown)
 		systemctl poweroff
