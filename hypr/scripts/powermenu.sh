@@ -19,7 +19,7 @@ case ${chosen} in
 		swaylock --clock --indicator --fade-in 2 --effect-compose "/media/Shared/wallpapers/CatppuccinMocha-Kurzgesagt-CloudyQuasar1.png"
         ;;
     $suspend)
-		systemctl suspend && swaylock --clock --indicator --fade-in 2 --effect-compose "/media/Shared/wallpapers/CatppuccinMocha-Kurzgesagt-CloudyQuasar1.png"
+		systemctl suspend
         ;;
     $logout)
 		hyprctl dispatch exit 0
