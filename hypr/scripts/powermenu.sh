@@ -16,7 +16,7 @@ case ${chosen} in
 		systemctl reboot
         ;;
     $lock)
-		swaylock --clock --indicator --fade-in 2 --effect-compose "/media/Shared/wallpapers/CatppuccinMocha-Kurzgesagt-CloudyQuasar1.png"
+		hyprlock
         ;;
     $suspend)
 		systemctl suspend
