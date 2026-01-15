@@ -26,3 +26,18 @@
 ![Gnome-Desktop](./assets/gnome-desktop.png)
 ### Terminal (Kitty) and neofetch
 ![Gnome-Terminal](./assets/gnome-term.png)
+
+## note to self
+
+```
+# install omz
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# get extensions
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+# catppuccin mocha
+    wget https://raw.githubusercontent.com/catppuccin/zsh-syntax-highlighting/main/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh -P ~/.oh-my-zsh/
+# zsh-autosuggestions
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    # zsh theme
+    cp theming/candy_custom.zsh-theme ~/.oh-my-zsh/themes/
+```    
