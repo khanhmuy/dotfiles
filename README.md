@@ -38,6 +38,6 @@
     wget https://raw.githubusercontent.com/catppuccin/zsh-syntax-highlighting/main/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh -P ~/.oh-my-zsh/
 # zsh-autosuggestions
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-    # zsh theme
+# zsh theme
     cp theming/candy_custom.zsh-theme ~/.oh-my-zsh/themes/
 ```    
