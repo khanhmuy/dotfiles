@@ -4,6 +4,8 @@ if [ "$HYPRGAMEMODE" = 1 ] ; then
     hyprctl --batch "\
         keyword animations:enabled 0;\
         keyword decoration:shadow:enabled 0;\
+        keyword windowrule[windowrule-2]:opacity 1 override 1 override;\
+        keyword windowrule[windowrule-4]:opacity 1 override 1 override;\
         keyword decoration:blur:enabled 0;\
         keyword general:gaps_in 0;\
         keyword general:gaps_out 0;\
