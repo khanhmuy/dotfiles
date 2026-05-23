@@ -16,6 +16,7 @@ alias commit="git commit"
 
 alias lpm="powerprofilesctl set power-saver && batmanager -p 3"
 alias perf="powerprofilesctl set performance && batmanager -p 2"
+alias balanced="powerprofilesctl set balanced && batmanager -p 1"
 alias battfull="batmanager -c0 -r1"
 alias plugged="batmanager -c1 -r0"
 
@@ -25,3 +26,10 @@ export PATH=$PATH:/home/hmuy/.spicetify
 export PATH=$PATH:~/.spoof-dpi/bin
 export THEOS=~/theos
 export THEOS=~/theos
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Created by `pipx` on 2025-09-18 00:40:00
+export PATH="$PATH:/home/hmuy/.local/bin"

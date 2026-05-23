@@ -3,7 +3,7 @@
         "position": "top",
         "reload_style_on_change": true,
         "modules-left": ["custom/pacman", "clock", "hyprland/workspaces"],
-        "modules-right": ["temperature", "cpu", "pulseaudio", "battery","tray", "custom/notification", "custom/power"],
+        "modules-right": ["temperature", "cpu", "pulseaudio", "battery", "tray", "custom/notification", "custom/power"],
 
         "hyprland/workspaces": {
             "format": "{icon}",
@@ -162,6 +162,6 @@
 
         "tray": {
             "icon-size": 14,
-            "spacing": 10
+            "spacing": 8
         },
 } 

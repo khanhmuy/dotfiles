@@ -10,10 +10,10 @@ logout='󰗼 Logout'
 chosen=$(echo -e "$lock\n$suspend\n$logout\n$reboot\n$shutdown" | rofi -dmenu -p "Power" -theme ~/.config/rofi/powermenu.rasi)
 case ${chosen} in
     $shutdown)
-		hyprshutdown -t 'Shutting down...' --post-cmd 'systemctl poweroff'
+		systemctl poweroff
         ;;
     $reboot)
-		hyprshutdown -t 'Restarting...' --post-cmd 'systemctl reboot'
+		systemctl reboot
         ;;
     $lock)
 		hyprlock
@@ -22,6 +22,6 @@ case ${chosen} in
 		systemctl suspend
         ;;
     $logout)
-		hyprshutdown
+		hyprctl dispatch exit 0
         ;;
 esac
