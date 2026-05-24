@@ -16,6 +16,7 @@ hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("rofi -modi drun -show drun"))
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("cliphist list | rofi -dmenu | cliphist decode | wl-copy"))
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("emote"))
 hl.bind("SHIFT + " .. mainMod .. " + C", hl.dsp.exec_cmd("hyprpicker"))
+
 hl.bind(mainMod .. " + F12", hl.dsp.exec_cmd("~/.config/hypr/scripts/gamemode.sh"))
 hl.bind(mainMod .. " + F11", hl.dsp.exec_cmd("~/.config/hypr/scripts/goofymon.sh"))
 
@@ -38,6 +39,12 @@ hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ to
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true })
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
+hl.bind("CTRL + " .. mainMod .. "+ F10", function()
+    hl.timer(function()
+        hl.dispatch(hl.dsp.dpms({ action = "disable" }))
+            end, {timeout = 500, type = "oneshot"})
+    end
+)
 
 hl.bind("ALT + left", hl.dsp.focus({ direction = "left" }))
 hl.bind("ALT + right", hl.dsp.focus({ direction = "right" }))
