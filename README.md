@@ -7,7 +7,7 @@
 - OS: Arch Linux
 - WM: [hyprland](https://hyprland.org/)
 - Launcher: [rofi](https://github.com/davatorium/rofi)
-- Bar: [waybar](https://github.com/Alexays/Waybar) (based on [hypalando's waybar config](https://github.com/MizxGaming/Hypalando/tree/main/.config/waybar))
+- Bar: [waybar](https://github.com/Alexays/Waybar)
 - GTK theme: [catppuccin-mocha-standard-pink-dark](github.com/catppuccin/gtk)
 - Icons: [papirus-icon-theme](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) + [papirus-folders](https://github.com/catppuccin/papirus-folders)
 - Wallpaper: [hyprpaper](https://github.com/hyprwm/hyprpaper) + [waypaper](https://github.com/anufrievroman/waypaper)
@@ -16,16 +16,10 @@
 - Shell: [zsh](https://www.zsh.org/) + [oh-my-zsh](https://ohmyz.sh/)
 - Terminal: [kitty](https://sw.kovidgoyal.net/kitty/)
 - All based on Catppuccin-Mocha colors!
-![Hyprland-Desktop](./assets/hypr.png)
-### GNOME
-- OS: Arch Linux + GNOME 45
-- Theme: [catppuccin-mocha-standard-pink-dark](github.com/catppuccin/gtk)
-- Icons: [papirus-icon-theme](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) + [papirus-folders](https://github.com/catppuccin/papirus-folders)
-- [Wallpaper](https://github.com/Gingeh/wallpapers/blob/main/landscapes/evening-sky.png)
+![Hyprland-Desktop-1](./assets/hypr-1.png)
+![Hyprland-Desktop-2](./assets/hypr-2.png)
+(artwork by [year-bear on osu!](https://osu.ppy.sh/users/12178754))
 
-![Gnome-Desktop](./assets/gnome-desktop.png)
-### Terminal (Kitty) and neofetch
-![Gnome-Terminal](./assets/gnome-term.png)
 
 ## note to self
 
