@@ -20,7 +20,7 @@ hl.bind("SHIFT + " .. mainMod .. " + C", hl.dsp.exec_cmd("hyprpicker"))
 hl.bind(mainMod .. " + F12", hl.dsp.exec_cmd("~/.config/hypr/scripts/gamemode.sh"))
 hl.bind(mainMod .. " + F11", hl.dsp.exec_cmd("~/.config/hypr/scripts/goofymon.sh"))
 
-hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m output --clipboard-only"))
+hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m output --clipboard-only --freeze --silent"))
 hl.bind(mainMod .. " + PRINT", hl.dsp.exec_cmd("hyprshot -m output"))
 hl.bind("SHIFT + " .. mainMod .. " + S", hl.dsp.exec_cmd("hyprshot -m region --clipboard-only --freeze --silent"))
 hl.bind("CTRL + " .. mainMod .. " + S", hl.dsp.exec_cmd("hyprshot -m window --clipboard-only --freeze --silent"))
@@ -39,12 +39,6 @@ hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ to
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true })
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
-hl.bind("CTRL + " .. mainMod .. "+ F10", function()
-    hl.timer(function()
-        hl.dispatch(hl.dsp.dpms({ action = "disable" }))
-            end, {timeout = 500, type = "oneshot"})
-    end
-)
 
 hl.bind("ALT + left", hl.dsp.focus({ direction = "left" }))
 hl.bind("ALT + right", hl.dsp.focus({ direction = "right" }))
@@ -60,9 +54,10 @@ hl.bind("SHIFT + " .. mainMod .. " + up", hl.dsp.window.move({ workspace = 3, fo
 hl.bind("SHIFT + " .. mainMod .. " + down", hl.dsp.window.move({ workspace = 4, follow = false }))
 hl.bind(mainMod .. " + down", hl.dsp.window.move({ workspace = 5, follow = false }))
 
-hl.bind("CTRL + " .. mainMod .. " + 1", hl.dsp.workspace.move({2, monitor = "current"}))
-hl.bind("CTRL + " .. mainMod .. " + 1", hl.dsp.workspace.move({3, monitor = "current"}))
-hl.bind("CTRL + " .. mainMod .. " + 1", hl.dsp.workspace.move({4, monitor = "current"}))
+hl.bind("CTRL + " .. mainMod .. " + 1", hl.dsp.workspace.move({workspace = 2, monitor = "current"}))
+hl.bind("CTRL + " .. mainMod .. " + 1", hl.dsp.workspace.move({workspace = 3, monitor = "current"}))
+hl.bind("CTRL + " .. mainMod .. " + 1", hl.dsp.workspace.move({workspace = 4, monitor = "current"}))
+hl.bind("CTRL + " .. mainMod .. " + 1", hl.dsp.workspace.move({workspace = 5, monitor = "current"}))
 
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
