@@ -8,6 +8,7 @@ hl.bind(mainMod .. " + up", hl.dsp.window.fullscreen({mode = "maximized", action
 hl.bind("ALT + " .. mainMod .. " + up", hl.dsp.window.fullscreen_state({internal = 2, client = 0, action = "toggle"}))
 hl.bind(mainMod .. " + G", hl.dsp.window.center())
 hl.bind(mainMod .. " + D", hl.dsp.window.pin())
+hl.bind("ALT + TAB", hl.dsp.exec_cmd("snappy-switcher next"))
 
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("kitty"))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
@@ -61,9 +62,3 @@ hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag())
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize())
-
-hl.gesture({
-    fingers = 3,
-    direction = "horizontal",
-    action = "workspace",
-})

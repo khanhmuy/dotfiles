@@ -13,8 +13,6 @@ hl.monitor({
     bitdepth = 10,
 })
 
---exec-once = ~/.config/hypr/scripts/random.sh
-
 hl.on("hyprland.start", function()
     hl.exec_cmd("waypaper --restore")
     hl.exec_cmd("mako")
@@ -29,4 +27,3 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("hypridle")
     hl.exec_cmd("emote")
 end)
-
