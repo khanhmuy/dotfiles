@@ -16,9 +16,7 @@
 - Shell: [zsh](https://www.zsh.org/) + [oh-my-zsh](https://ohmyz.sh/)
 - Terminal: [kitty](https://sw.kovidgoyal.net/kitty/)
 - All based on Catppuccin-Mocha colors!
-![Hyprland-Desktop-1](./assets/hypr-1.png)
-![Hyprland-Desktop-2](./assets/hypr-2.png)
-(artwork by [year-bear on osu!](https://osu.ppy.sh/users/12178754))
+![Hyprland-Desktop](./assets/hypr.png)
 
 
 ## note to self
