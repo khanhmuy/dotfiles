@@ -35,7 +35,7 @@ hl.animation({
 hl.config({
     general = {
         gaps_in = 1,
-        gaps_out = 2,
+        gaps_out = 0,
         border_size = 0,
         col = {
             active_border = "rgb(f5c2e7)",
@@ -54,7 +54,7 @@ hl.config({
         },
     },
     animations = {
-        enabled = true,
+        enabled = false,
     },
     dwindle = {
         preserve_split = true,
