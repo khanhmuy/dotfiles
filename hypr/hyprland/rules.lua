@@ -22,7 +22,6 @@ hl.window_rule({
     },
     opacity = "1 override 1 override",
     border_size = 0,
-    tile = true,
 })
 
 hl.workspace_rule({
