@@ -1,15 +1,16 @@
 @import url('mocha.css');
 
 * {
-    font-size:14px;
-    font-family: "SFProDisplay Nerd Font";
+    font-size: 14px;
+    font-family: "SFRounded Nerd Font";
+    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, 0.5);
 }
 window#waybar {
 	background:unset
 }
 .modules-left {
-    padding:7px;
-    margin: 4px 4px 4px 4px;
+    padding: 5px;
+    margin: 2px 4px 2px 4px;
     border-radius:10px;
     background: transparent;
 }
@@ -21,8 +22,8 @@ window#waybar {
     box-shadow: 0px 0px 2px rgba(0, 0, 0, .6); 
 } */
 .modules-right {
-    padding:7px;
-    margin: 4px 4px 4px 4px;
+    padding: 5px;
+    margin: 2px 4px 2px 4px;
     border-radius:10px;
     background: transparent; 
 }
@@ -68,24 +69,20 @@ tooltip {
 #workspaces button.active {
     color: @pink;
     border: none;
-    text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
     transition: all 0.3s ease-in-out;
 }
 #workspaces button.empty {
     color: alpha(@text, .5);
     border: none;
-    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .2);
 }
 #workspaces button.empty:hover {
     color: alpha(@text, .5);
     border: none;
-    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .5);
     transition: all 0.3s ease-in-out;
 }
 #workspaces button.empty.active {
     color: @pink;
     border: none;
-    text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
     transition: all 0.3s ease-in-out;
 }
 #workspaces button.urgent {

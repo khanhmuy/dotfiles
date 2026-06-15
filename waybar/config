@@ -1,6 +1,7 @@
 {
     "layer": "top",
     "position": "top",
+    "height": 20,
     "reload_style_on_change": true,
     "modules-left": ["custom/pacman", "clock", "hyprland/workspaces"],
     "modules-center": ["mpris"],

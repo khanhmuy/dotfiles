@@ -3,7 +3,7 @@ hl.layer_rule({
     match = {
         namespace = "waybar",
     },
-    blur = false,
+    blur = true,
 })
 
 hl.window_rule({
@@ -18,10 +18,10 @@ hl.window_rule({
 hl.window_rule({
     name = "opaque",
     match = {
-        title = "(.*)",
+        class = "(.*)",
     },
-    opacity = "1 override 1 override",
-    border_size = 0,
+    opacity = "1 override 0.95 override",
+    tile = true,
 })
 
 hl.workspace_rule({
