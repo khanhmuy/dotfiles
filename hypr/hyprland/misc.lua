@@ -15,7 +15,7 @@ hl.config({
         force_zero_scaling = true,
     },
     misc = {
-        disable_hyprland_logo = false,
+        disable_hyprland_logo = true,
     },
     debug = {
         vfr = true,
