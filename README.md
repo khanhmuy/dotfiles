@@ -4,14 +4,11 @@
 ## Usage
 - idk copy the files manually lol
 ### Hyprland
-- OS: Arch Linux
+- OS: [Arch Linux](https://archlinux.org/)
 - WM: [hyprland](https://hyprland.org/)
-- Launcher: [rofi](https://github.com/davatorium/rofi)
-- Bar: [waybar](https://github.com/Alexays/Waybar)
+- Shell: [noctalia](https://github.com/noctalia-dev/noctalia)
 - GTK theme: [catppuccin-mocha-standard-pink-dark](github.com/catppuccin/gtk)
 - Icons: [papirus-icon-theme](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) + [papirus-folders](https://github.com/catppuccin/papirus-folders)
-- Wallpaper: [hyprpaper](https://github.com/hyprwm/hyprpaper) + [waypaper](https://github.com/anufrievroman/waypaper)
-- Lock screen: [hyprlock](https://github.com/hyprwm/hyprlock)
 - Audio: [pipewire](https://pipewire.org/) + [EasyEffects](https://github.com/wwmm/easyeffects)
 - Shell: [zsh](https://www.zsh.org/) + [oh-my-zsh](https://ohmyz.sh/)
 - Terminal: [kitty](https://sw.kovidgoyal.net/kitty/)

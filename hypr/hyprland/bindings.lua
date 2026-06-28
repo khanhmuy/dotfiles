@@ -11,10 +11,10 @@ hl.bind(mainMod .. " + D", hl.dsp.window.pin())
 --hl.bind("ALT + TAB", hl.dsp.exec_cmd("snappy-switcher next"))
 
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("kitty"))
-hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
-hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("rofi -modi drun -show drun"))
-hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("cliphist list | rofi -dmenu | cliphist decode | wl-copy"))
-hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("emote"))
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("qs -c noctalia-shell ipc call lockScreen lock"))
+hl.bind(mainMod .. " + space", hl.dsp.exec_cmd("qs -c noctalia-shell ipc call launcher toggle"))
+hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("qs -c noctalia-shell ipc call launcher clipboard"))
+hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("qs -c noctalia-shell ipc call launcher emoji"))
 hl.bind("SHIFT + " .. mainMod .. " + C", hl.dsp.exec_cmd("hyprpicker"))
 
 hl.bind(mainMod .. " + F12", hl.dsp.exec_cmd("~/.config/hypr/scripts/gamemode.sh"))
@@ -24,6 +24,7 @@ hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m output --clipboard-only --freeze -
 hl.bind(mainMod .. " + PRINT", hl.dsp.exec_cmd("hyprshot -m output"))
 hl.bind("SHIFT + " .. mainMod .. " + S", hl.dsp.exec_cmd("hyprshot -m region --clipboard-only --freeze --silent"))
 hl.bind("CTRL + " .. mainMod .. " + S", hl.dsp.exec_cmd("hyprshot -m window --clipboard-only --freeze --silent"))
+hl.bind("SHIFT + " .. mainMod .. " + T", hl.dsp.exec_cmd("qs -c noctalia-shell ipc call plugin:screen-toolkit ocr"))
 
 hl.bind(mainMod .. " + 1", hl.dsp.exec_cmd("nautilus"))
 hl.bind(mainMod .. " + 2", hl.dsp.exec_cmd("chromium"))

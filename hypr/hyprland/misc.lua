@@ -24,10 +24,24 @@ hl.config({
         no_update_news = true,
         no_donation_nag = true,
     },
+    plugin = {
+        hyprgrass = {
+            sensitivity = 4.0,
+            long_press_delay = 400,
+            edge_margin = 10,
+        }
+    }
 })
 
 hl.gesture({
     fingers = 3,
     direction = "horizontal",
     action = "workspace",
+    workspace_swipe_touch = true,
+    workspace_swipe_cancel_ratio = 0.15,
 })
+
+hl.plugin.hyprgrass.gesture {
+    pattern = {kind = "swipe", fingers = 3, direction = "down"},
+    action = "close",
+}

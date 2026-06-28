@@ -10,6 +10,11 @@ hl.env("MOZ_ENABLE_WAYLAND", "1")
 hl.env("GDK_BACKEND", "wayland,x11,*")
 hl.env("QT_QPA_PLATFORM", "wayland;xcb")
 
-hl.env("QT_QPA_PLATFORMTHEME", "qt5ct")
+hl.env("QT_QPA_PLATFORMTHEME", "gtk3")
+
+--hl.env("GLFW_IM_MODULE", "ibus")
+--hl.env("GTK_IM_MODULE", "fcitx")
+--hl.env("QT_IM_MODULE", "fcitx")
+--hl.env("SDL_IM_MODULE", "fcitx")
 
 hl.env("FP_TRANSFER_DEBUG", "1")

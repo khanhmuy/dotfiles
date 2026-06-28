@@ -6,6 +6,16 @@ hl.layer_rule({
     blur = true,
 })
 
+hl.layer_rule({
+    name = "noctalia",
+    match = {
+        namespace = "noctalia-background-.*$",
+    },
+    ignore_alpha = 0.5,
+    blur = false,
+    blur_popups = false,
+})
+
 hl.window_rule({
     name = "windowrule-1",
     match = {
@@ -20,8 +30,7 @@ hl.window_rule({
     match = {
         class = "(.*)",
     },
-    opacity = "1 override 0.95 override",
-    tile = true,
+    opacity = "1 override 1 override",
 })
 
 hl.workspace_rule({

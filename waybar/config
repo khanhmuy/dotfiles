@@ -47,7 +47,7 @@
         "tooltip-format-disconnected": "Error",
         "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
         "tooltip-format-ethernet": "{ifname} 🖧 ",
-        "on-click": "networkmanager_dmenu"
+        "on-click": "control"
     },
     "bluetooth": {
         "format-on": "󰂯",
@@ -102,7 +102,7 @@
 
     "custom/pacman": {
         "format": "󰫣",
-        "on-click": "rofi -modi drun -show drun",
+        "on-click": "waydroid show-full-ui",
         "tooltip": false
     },
     "custom/notification": {

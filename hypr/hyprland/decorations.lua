@@ -45,11 +45,17 @@ hl.config({
         layout = "dwindle",
     },
     decoration = {
-        rounding = 10,
+        rounding = 20,
+        rounding_power = 2,
+        shadow = {
+            enabled = true,
+            range = 4,
+            render_power = 3,
+        },
         blur = {
             enabled = true,
-            size = 5,
-            passes = 5,
+            size = 3,
+            passes = 2,
             new_optimizations = true,
         },
     },
